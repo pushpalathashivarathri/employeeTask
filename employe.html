@@ -1,0 +1,335 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            float: right;
+            width: 50%;
+            border: 2px solid rgb(113, 198, 226);
+            padding: 5px;
+            color: blue;
+        }
+        .dropdown {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 30px;
+            margin: 15px;
+        }
+       #pageDropdown {
+         padding: 6px 10px;
+        }
+        
+        button {
+            padding: 6px 15px;
+            border: none;
+            background-color: #69bdbd;
+            margin: 10px;
+           }
+        button:hover {
+            padding: 6px 15px;
+           border:2px solid  black;
+           background-color: cornsilk;
+        margin: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="searchInput" placeholder="Search by name">
+    </div><br/><br/>
+    <div>
+        <table border="2" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th rowspan="2">Emp-id</th>
+                    <th rowspan="2">Emp-name</th>
+                    <th rowspan="2">Emp-email</th>
+                    <th colspan="4">Address</th>
+                    <th rowspan="2">Emp-designation</th>
+                </tr>
+                <tr align="center">
+                    <td>Address1</td>
+                    <td>Address2</td>
+                    <td>State</td>
+                    <td>Country</td>
+                </tr>
+            </thead>
+            <tbody id="employeeTableBody">
+                <tr align="center">
+                    <td>1</td>
+                    <td>Arya</td>
+                    <td>arya@gmail.com</td>
+                    <td>Korutla</td>
+                    <td>Karimnagar</td>
+                    <td>Telangana</td>
+                    <td>India</td>
+                    <td>Python Developer</td>
+                </tr>
+                <tr align="center">
+                    <th>2</th>
+                    <td>Banny</td>
+                    <td>banny@gmail.com</td>
+                    <td>rakhi street</td>
+                    <td>Siddipet</td>
+                    <td>Telangana</td>
+                    <td>India</td>
+                    <td>Java Developer</td>
+                    </tr>
+                <tr align="center">
+                    <th>3</th>
+                    <td>Funny</td>
+                    <td>funny@gmail.com</td>
+                    <td>Nagapur</td>
+                    <td>Nirmal</td>
+                    <td>Telangana</td>
+                    <td>India</td>
+                    <td>Python Developer</td>
+                    </tr>
+                <tr align="center">
+                    <th>4</th>
+                    <td>Sunny</td>
+                    <td>sunny@gmail.com</td>
+                    <td>Prakash nagar</td>
+                    <td>Kamareddy</td>
+                    <td>Telangana</td>
+                    <td>India</td>
+                    <td>Java Developer</td>
+                    </tr>
+                <tr align="center">
+                    <th>5</th>
+                    <td>Naru</td>
+                    <td>naru@gmail.com</td>
+                    <td>Hyderabad</td>
+                    <td>RTC X roads</td>
+                    <td>Telangana</td>
+                    <td>India</td>
+                    <td>Python Developer</td>
+                    </tr>
+                <tr align="center">
+                    <th>6</th>
+                    <td>Vani</td>
+                    <td>vani@gmail.com</td>
+                    <td>Hyderabad</td>
+                    <td>Durgam cheruvu</td>
+                    <td>Telangana</td>
+                    <td>India</td>
+                    <td>front-end Developer</td>
+                    </tr>
+                <tr align="center">
+                    <th>7</th>
+                    <td>Sirisha</td>
+                    <td>siri@gmail.com</td>
+                    <td>Karnool</td>
+                    <td>Road no.05</td>
+                    <td>Andhra Pradesh</td>
+                    <td>India</td>
+                    <td>Python Developer</td>
+                    </tr>
+                <tr align="center">
+                    <th>8</th>
+                    <td>Lokesh</td>
+                    <td>loki@gmail.com</td>
+                    <td>Kadapa</td>
+                    <td>Anantapoor</td>
+                    <td>Andra Pradesh</td>
+                    <td>India</td>
+                    <td>Back Developer</td>
+                    </tr>
+                <tr align="center">
+                    <th>9</th>
+                    <td>Chaitanya</td>
+                    <td>chaitu@gmail.com</td>
+                    <td>Hyderabad</td>
+                    <td>Lingampally</td>
+                    <td>Telangana</td>
+                    <td>India</td>
+                    <td>Java Developer</td>
+                    </tr>
+                <tr align="center">
+                    <th>10</th>
+                    <td>Thirumalesh</td>
+                    <td>Thiru@gmail.com</td>
+                    <td>Hyderabad</td>
+                    <td>Raidurg</td>
+                    <td>Telangana</td>
+                    <td>India</td>
+                    <td>Front-end Developer</td>
+                    </tr>
+                <tr align="center">
+                    <th>11</th>
+                    <td>Thirmala</td>
+                    <td>mancham@gmail.com</td>
+                    <td>Hyderabad</td>
+                    <td>Chikkadpally</td>
+                    <td>Telangana</td>
+                    <td>India</td>
+                    <td>Front-end Developer</td>
+                    </tr>
+                    <tr align="center">
+                        <th>12</th>
+                        <td>Sri</td>
+                        <td>chinni@gmail.com</td>
+                        <td>Hi-tech city</td>
+                        <td>Madhapur</td>
+                        <td>Telangana</td>
+                        <td>India</td>
+                        <td>Fullstack Developer</td>
+                        </tr>
+                    <tr align="center">
+                        <th>13</th>
+                        <td>Chiru</td>
+                        <td>mamma@gmail.com</td>
+                        <td>kanapoor</td>
+                        <td>Nirmal</td>
+                        <td>Telangana</td>
+                        <td>India</td>
+                        <td>Back-end Developer</td>
+                        </tr>
+                    <tr align="center">
+                            <th>14</th>
+                            <td>Adhya</td>
+                            <td>adhya@gmail.com</td>
+                            <td>Korutla</td>
+                            <td>Karimnagar</td>
+                            <td>Telangana</td>
+                            <td>India</td>
+                            <td>Fullstack Developer</td>
+                        </tr>                                                  
+                    <tr align="center">
+                            <th>15</th>
+                            <td>Banny</td>
+                            <td>banny@gmail.com</td>
+                            <td>Rakhi street</td>
+                            <td>Siddipet</td>
+                            <td>Telangana</td>
+                            <td>India</td>
+                            <td>Java Developer</td>
+                        </tr>
+            </tbody>
+        </table>
+        <div class="dropdown">
+        <div id="paginationButtons"></div>
+        <div>
+            pageDropdown <select id="pageDropdown">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                
+            </select>
+        </div>
+    </div>
+</div>
+
+    <script>
+        debugger;
+        const searchInput = document.getElementById('searchInput');
+        const tableBody = document.getElementById('employeeTableBody');
+        const rows = Array.from(tableBody.getElementsByTagName('tr'));
+        const pageDropdown = document.getElementById('pageDropdown');
+
+        let currentPage = 1;
+        let itemsPerPage = parseInt(pageDropdown.value);
+        let totalPages = Math.ceil(rows.length / itemsPerPage);
+        let filteredRows = rows.slice(); //dulicate cpopy of array data
+
+        function displayRows() {
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const visibleRows = filteredRows.slice(startIndex, endIndex);
+
+            tableBody.innerHTML = '';
+            for (const row of visibleRows) {
+                tableBody.appendChild(row);
+            }
+        }
+
+        function displayPaginationButtons() {
+            debugger;
+            const paginationButtons = document.getElementById('paginationButtons');
+            paginationButtons.innerHTML = '';
+
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.innerText = i;
+                button.addEventListener('click', () => {
+                    currentPage = i;
+                    displayRows();
+                    displayPaginationButtons();
+                });
+                if (i === currentPage) {
+                    button.classList.add('active');
+                }
+
+                paginationButtons.appendChild(button);
+            }
+        }
+
+        function updatePagination() {
+            debugger;
+            totalPages = Math.ceil(filteredRows.length / itemsPerPage);
+            currentPage = Math.min(currentPage, totalPages);
+
+            displayRows();
+            displayPaginationButtons();
+        }
+
+        function handlePageDropdownChange() {
+            debugger;
+            itemsPerPage = parseInt(pageDropdown.value);
+            currentPage = 1;
+            updatePagination();
+        }
+
+        searchInput.addEventListener('input', function () {
+            const searchValue = this.value.toLowerCase();
+
+            filteredRows = rows.filter((row) => {
+                const name = row.getElementsByTagName('td')[1];
+                const nameValue = name.textContent || name.innerText;
+                return nameValue.toLowerCase().includes(searchValue);
+            });
+
+            currentPage = 1;
+            updatePagination();
+        });
+
+        pageDropdown.addEventListener('change', handlePageDropdownChange);
+
+
+        debugger;
+        updatePagination();
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
